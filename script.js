@@ -1,5 +1,5 @@
 import Ball from "./Ball.js"
-import Paddle from "./Paddle.js "
+import Paddle from "./Paddle.js"
 
 const ball = new Ball(document.getElementById("ball"))
 const playerPaddle = new Paddle(document.getElementById("player-paddle"))
@@ -11,7 +11,7 @@ let lastTime
 function update(time) {
     if (lastTime != null) {
         const delta = time - lastTime
-        ball.update(delta, [playerPaddle.rect(), computerPaddle.rect()   ])
+        ball.update(delta, [playerPaddle.rect(), computerPaddle.rect()])
         computerPaddle.update(delta, ball.y)
         const hue = parseFloat(getComputedStyle( document.documentElement).getPropertyValue("--hue"))
 
