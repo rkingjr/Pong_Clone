@@ -3,7 +3,7 @@ const velocityIncrease = 0.00001
 export default class Ball {
     constructor(ballElement) {
         this.ballElement = ballElement
-        // this.reset()
+        this.reset()
     }
 
     get x() {
